@@ -2,9 +2,13 @@ package Seminar02_HW;
 
 class Plate {
 
-    public int food;
+    private int food;
     public Plate(int food) {
         this.food = food;
+    }
+    
+    void info() {
+        System.out.println("plate: " + food);
     }
 
     boolean decreaseFood(int n) {
@@ -14,12 +18,9 @@ class Plate {
         food -= n;
         return true;
     }
+    
     void addFood(int food) {
         this.food += food;
-    }
-
-    void info() {
-        System.out.println("plate: " + food);
     }
 }
 class Cat {
@@ -33,14 +34,14 @@ class Cat {
         this.hungry = true;
     }
 
-    void info() {
-        String isHungry = !hungry ? "сыт" : "голоден";
-        System.out.println(name + ": " + isHungry);
-    }
-
     void eat(Plate plate) {
         if (hungry && plate.decreaseFood(appetite))
             hungry = false;
+    }
+
+    void info() {
+        String isHungry = !hungry ? "сыт" : "голоден";
+        System.out.println(name + ": " + isHungry);
     }
 }
 public class Main {
