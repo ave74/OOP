@@ -6,12 +6,14 @@ public abstract class Employee implements Comparable <Employee> {
 
     //protected String position;
     protected double salary;
+    public int age;
     public abstract double calculateSalary();
 
-    public Employee(String surName, String name, double salary) {
+    public Employee(String surName, String name, double salary, int age) {
         this.name = name;
         this.surName = surName;
         this.salary = salary;
+        this.age=age;
     }
 
     @Override
@@ -22,4 +24,5 @@ public abstract class Employee implements Comparable <Employee> {
         }
         return surNameRes;
     }
+
 }

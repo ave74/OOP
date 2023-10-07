@@ -1,8 +1,8 @@
 package Seminar03_HW;
 
 public class Worker extends Employee{
-    public Worker(String surName, String name, double salary) {
-        super(surName, name, salary);
+    public Worker(String surName, String name, double salary, int age) {
+        super(surName, name, salary, age);
     }
 
     @Override
@@ -12,7 +12,7 @@ public class Worker extends Employee{
 
     @Override
     public String toString() {
-        return String.format("%s %s; Рабочий; Среднемесячная заработная плата (фиксированная): %.2f (руб.)",
-        surName, name, calculateSalary());
+        return String.format("%s %s; Рабочий; Среднемесячная заработная плата (фиксированная): %.2f (руб.), возраст (лет): %d",
+        surName, name, calculateSalary(), age);
     }
 }
